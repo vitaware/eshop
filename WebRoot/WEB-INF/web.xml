@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowPageCon</servlet-name>
+    <servlet-class>com.shop.web.control.ShowPageCon</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>checkGoodsCon</servlet-name>
+    <servlet-class>com.shop.web.control.checkGoodsCon</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>shoppingCartCon</servlet-name>
+    <servlet-class>com.shop.web.control.shoppingCartCon</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ToShoppingCart</servlet-name>
+    <servlet-class>com.shop.web.ui.ToShoppingCart</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DelGoodsCon</servlet-name>
+    <servlet-class>com.shop.web.control.DelGoodsCon</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DelOneGoodsCon</servlet-name>
+    <servlet-class>com.shop.web.control.DelOneGoodsCon</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ShowPageCon</servlet-name>
+    <url-pattern>/ShowPageCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>checkGoodsCon</servlet-name>
+    <url-pattern>/checkGoodsCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>shoppingCartCon</servlet-name>
+    <url-pattern>/shoppingCartCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ToShoppingCart</servlet-name>
+    <url-pattern>/ToShoppingCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelGoodsCon</servlet-name>
+    <url-pattern>/DelGoodsCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelOneGoodsCon</servlet-name>
+    <url-pattern>/DelOneGoodsCon</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
