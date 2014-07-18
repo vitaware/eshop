@@ -83,7 +83,6 @@ public class HGDaoImpl implements HGDao{
 			//¹Ø±Õ×ÊÔ´
 			JDBCTools.close(rs, pstmt, conn);
 		}
-
 		return goods;
 	}
 
