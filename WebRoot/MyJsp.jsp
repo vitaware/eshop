@@ -8,30 +8,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!--
 　　　　Inventory.jsp -
 　　　　显示商品目录并且获取用户购买的物品及其数量单价等信息 
-
-　　-->
+-->
 
 <html>
-　　　<br/>
-　　　<center>
 　　　　　<TITLE>购物车</TITLE>
-　　　<font SIZE="+1">
-　　　<b> 欢迎选购商品</b>
-　　　</font>
-　　		<body bgcolor="#FFFFF">
 
-	　　　<!--
-	　　　　Page指令
-	　　　-->
-　　　	<%--
-		<%@ page import="shoppingcart.*" errorPage="error.jsp" %>
+<head>
+	<!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://lib.sinaapp.com/js/jquery/1.8/jquery.min.js"></script>
 
-　　　　创建表单设定页面布局 
-　　　--%>
-　　　<br><br>
+</head>
+　　		
+<body bgcolor="#FFFFF">
+
 　　　<form method="post" action="">
 	　　　<table WIDTH=450 CELLSPACING="0" CELLPADDING="0" BORDER="1">
-	
 	　　　<%--
 	　　　　创建表头
 	　　　--%>
@@ -50,7 +42,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	　　</table>
 	
 　　</form>
-　　</center>
 　　</body>
 　　</html> 
 

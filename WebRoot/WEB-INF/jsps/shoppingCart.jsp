@@ -9,12 +9,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-   <br/>
-　　　<center>
-　　　　　<TITLE>购物车</TITLE>
-　　　<font SIZE="+1">
-　　　<b>购物车</b>
-　　　</font>
+　　　　 <TITLE>购物车</TITLE>
+	<!-- Bootstrap -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/shop.css" rel="stylesheet">
 		<script type="text/javascript">
 			function chdel(){
 				//获取要删除的checkbox --得到是数组
@@ -49,64 +47,66 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			}
 		</script>
 	</head>
-<body bgcolor="#FFFFF">
-　　　<br /><br />
+<body>
+<div>
+
 　　　<form id="frm" method="post" action="${pageContext.request.contextPath}/DelGoodsCon">
 	　　　<table WIDTH=800 CELLSPACING="0" CELLPADDING="0" BORDER="1">
 		
 		　　　<tr>
-				<td WIDTH=3% BGCOLOR="#ECA613"> 
+				<td WIDTH=3%  > 
 					<b>全选</b>
 					<b><input type="checkbox" ></b>
 				</td>
-		　　　　<td WIDTH=10% BGCOLOR="#ECA613"> <b>商品编号</b></td>
-				<td WIDTH=25% BGCOLOR="#ECA613"> <b>商品名称</b> </td>
-				<td BGCOLOR="#ECA613"> <b>商品描述</b></td>
-				<td WIDTH=8% ALIGN=center BGCOLOR="#ECA613" > <b>单价</b></td>
-				<td WIDTH=8% ALIGN=center BGCOLOR="#ECA613" > <b>购买数量</b></td>
-				<td WIDTH=8% ALIGN=center BGCOLOR="#ECA613" > <b>操作</b></td>
+		　　　　<td WIDTH=10%  > <b>商品编号</b></td>
+				<td WIDTH=25%  > <b>商品名称</b> </td>
+				<td  > <b>商品描述</b></td>
+				<td WIDTH=8% ALIGN=center   > <b>单价</b></td>
+				<td WIDTH=8% ALIGN=center   > <b>购买数量</b></td>
+				<td WIDTH=8% ALIGN=center   > <b>操作</b></td>
 		　　　</tr>
 			
 				
+
 			<c:forEach items="${shoppingCart.map}" var="map" varStatus="temp">
 					<tr>
-						<td WIDTH=5% BGCOLOR="#ECA613">
+						<td WIDTH=5%  >
 							<b><input type="checkbox" id="del" name="del" value="${map.key }"></b>
 						</td>
-						<td WIDTH=10% BGCOLOR="#ECA613"> <b>${map.key }</b></td>
-						<td WIDTH=25% BGCOLOR="#ECA613"> <b>${map.value.goodsName}</b> </td>　　　　
-						<td BGCOLOR="#ECA613"> <b>${map.value.goodsDescription}</b></td>
-						<td WIDTH=8% ALIGN=center BGCOLOR="#ECA613" > <b>${map.value.goodsPrice}</b></td>
-						<td WIDTH=8% ALIGN=center BGCOLOR="#ECA613" > 
+						<td WIDTH=10%  > <b>${map.key }</b></td>
+						<td WIDTH=25%  > <b>${map.value.goodsName}</b> </td>　　　　
+						<td  > <b>${map.value.goodsDescription}</b></td>
+						<td WIDTH=8% ALIGN=center   > <b>${map.value.goodsPrice}</b></td>
+						<td WIDTH=8% ALIGN=center   > 
 							<a class="" href="">-</a>  
 			        		<input type="text" name="" id="" class="" maxlength="2" value="${map.value.goodsNum}" onkeyup="" style="width: 30px"/>  
 			        		<a class="" href="">+</a> 
 						</td>
-						<td WIDTH=8% ALIGN=center BGCOLOR="#ECA613" >
+						<td WIDTH=8% ALIGN=center   >
 							<a href="${pageContext.request.contextPath}/DelOneGoodsCon?goodsCode=${map.key}">删除</a>
 						</td>
 					</tr>
 			</c:forEach>
 				
 					<tr>
-						<td  colspan="1" align=right BGCOLOR="#ECA613">
+						<td  colspan="1" align=right  >
 							<b><input type="button" value="删除选中" onclick="chdel();"/></b>
 						</td>
-					　　<td  colspan="2" align=right BGCOLOR="#ECA613">
+					　　<td  colspan="2" align=right  >
 								<b>共 </b>
 								<b>${shoppingCart.cartSize}</b>
 								<b>件商品 </b>
 						</td>
-							<td COLSPAN="4" align=right BGCOLOR="#ECA613" >
+							<td COLSPAN="4" align=right   >
 								<b>金额总计： </b>
 								<b>${shoppingCart.totalPrice}</b>
 						</td>
 					　</tr>
 				
-				
 	　　</table>
 　　</form>
-
-　　</center>
+</div>
+	<script src="http://lib.sinaapp.com/js/jquery/1.8/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 　　</body>
 </html>

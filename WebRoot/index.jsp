@@ -1,32 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <base href="<%=basePath%>">
-    
-    <title>首页</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-
-  </head>
-  <frameset rows="5%,*">
-  		<frame id="top" name="top" src="${pageContext.request.contextPath}/template/top.jsp">
-  		<frameset cols="10%,*">
-  			<frame id="left" name="left" src="${pageContext.request.contextPath}/template/left.jsp">
-  			<frame id="right" name="right" src="${pageContext.request.contextPath}/template/right.jsp">
-  		</frameset>
-  </frameset>
-  
-  </html>
+ <frameset rows="30%,*" style="height: 100%">
+  		<frame id="top" frameborder="0" name="top" scrolling="no" src="${pageContext.request.contextPath}/template/top.jsp">
+  		<frame id="bottom" frameborder="0" scrolling="no"  name="bottom" src="${pageContext.request.contextPath}/template/bottom.jsp">
+ </frameset>

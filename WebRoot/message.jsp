@@ -15,14 +15,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+	<meta http-equiv="description" content="message page">
+			<!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/shop.css" rel="stylesheet">
 
   </head>
   
   <body>
-    ${message}
+  	<div class="container">
+  		${message}
+  	</div>
+	<script src="http://lib.sinaapp.com/js/jquery/1.8/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
