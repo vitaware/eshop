@@ -4,6 +4,20 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<filter>
+		<filter-name>MyFilter</filter-name>
+		<filter-class>com.shop.filter.MyFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>MyFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>	
+		
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
@@ -40,8 +54,172 @@
     <servlet-name>DelOneGoodsCon</servlet-name>
     <servlet-class>com.shop.web.control.DelOneGoodsCon</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>HGSearchkw</servlet-name>
+    <servlet-class>com.shop.web.control.HGSearchkw</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>WatchCartCon</servlet-name>
+    <servlet-class>com.shop.web.control.WatchCartCon</servlet-class>
+  </servlet>
 
 
+
+
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UMLoginOutConServlet</servlet-name>
+    <servlet-class>com.shop.web.control.UMLoginOutConServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UMRegServlet</servlet-name>
+    <servlet-class>com.shop.web.control.UMRegServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UMRegiterServlet</servlet-name>
+    <servlet-class>com.shop.web.ui.UMRegiterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UMLoginServlet</servlet-name>
+    <servlet-class>com.shop.web.ui.UMLoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UMLoginConServlet</servlet-name>
+    <servlet-class>com.shop.web.control.UMLoginConServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UMUpdateConServlet</servlet-name>
+    <servlet-class>com.shop.web.control.UMUpdateConServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UMUpdateServlet</servlet-name>
+    <servlet-class>com.shop.web.ui.UMUpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UMUpdateConServlet01</servlet-name>
+    <servlet-class>com.shop.web.control.UMUpdateConServlet01</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadAddressServlet</servlet-name>
+    <servlet-class>com.shop.web.control.LoadAddressServlet</servlet-class>
+  </servlet>
+	 <servlet>
+    <servlet-name>AddServlet</servlet-name>
+    <servlet-class>com.shop.web.control.AddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowAllShopServlet</servlet-name>
+    <servlet-class>com.shop.web.control.ShowAllShopServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelShopServlet</servlet-name>
+    <servlet-class>com.shop.web.control.DelShopServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AddShopCartsServlet</servlet-name>
+    <servlet-class>com.shop.web.ui.AddShopCartsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ShowAllServlet</servlet-name>
+    <servlet-class>com.shop.web.ui.ShowAllServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateServlet</servlet-name>
+    <servlet-class>com.shop.web.ui.UpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateConServlet</servlet-name>
+    <servlet-class>com.shop.web.control.UpdateConServlet</servlet-class>
+  </servlet>
+
+	
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>UMLoginOutConServlet</servlet-name>
+    <url-pattern>/UMLoginOutConServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UMRegServlet</servlet-name>
+    <url-pattern>/UMRegServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UMRegiterServlet</servlet-name>
+    <url-pattern>/UMRegiterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UMLoginServlet</servlet-name>
+    <url-pattern>/UMLoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UMLoginConServlet</servlet-name>
+    <url-pattern>/UMLoginConServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UMUpdateConServlet</servlet-name>
+    <url-pattern>/UMUpdateConServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UMUpdateServlet</servlet-name>
+    <url-pattern>/UMUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UMUpdateConServlet01</servlet-name>
+    <url-pattern>/UMUpdateConServlet01</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadAddressServlet</servlet-name>
+    <url-pattern>/LoadAddressServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>AddServlet</servlet-name>
+    <url-pattern>/AddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAllShopServlet</servlet-name>
+    <url-pattern>/ShowAllShopServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelShopServlet</servlet-name>
+    <url-pattern>/DelShopServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddShopCartsServlet</servlet-name>
+    <url-pattern>/AddShopCartsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowAllServlet</servlet-name>
+    <url-pattern>/ShowAllServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateServlet</servlet-name>
+    <url-pattern>/UpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateConServlet</servlet-name>
+    <url-pattern>/UpdateConServlet</url-pattern>
+  </servlet-mapping>
 
 
 
@@ -70,6 +248,22 @@
     <servlet-name>DelOneGoodsCon</servlet-name>
     <url-pattern>/DelOneGoodsCon</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HGSearchkw</servlet-name>
+    <url-pattern>/HGSearchkw</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>WatchCartCon</servlet-name>
+    <url-pattern>/WatchCartCon</url-pattern>
+  </servlet-mapping>
+  <error-page>
+	  	<exception-type>java.lang.Throwable</exception-type>
+	  	<location>/error.jsp</location>
+   </error-page>
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/404.jsp</location>
+  </error-page>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>

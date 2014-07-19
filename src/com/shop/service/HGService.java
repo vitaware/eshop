@@ -18,4 +18,10 @@ public interface HGService {
 	 * @return
 	 */
 	public abstract Goods selectGoodsByCodeSer(String goodsCode);
+	/**
+	 * ¹Ø¼ü×ÖËÑË÷
+	 * @param search
+	 * @return
+	 */
+	public abstract List<Goods> selectGoods(String search);
 }

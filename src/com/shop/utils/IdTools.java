@@ -2,12 +2,17 @@ package com.shop.utils;
 
 import java.util.UUID;
 
-public class UserIdCreate {
-	/**
-	 * Í¨¹ıUUIDËæ»ú²úÉúÓÃ»§ID£¬ÇÒÎ¨Ò»
-	 * @return
-	 */
+/**
+ * ç”¨äºç”Ÿæˆ ä¸€ä¸ª éšæœºçš„id  id----å”¯ä¸€
+ * @author Administrator
+ *
+ */
+public class IdTools {
+	
 	public static String getRandomId(){
+		
 		return UUID.randomUUID().toString();
 	}
+	
+	
 }

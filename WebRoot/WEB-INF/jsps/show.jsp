@@ -74,9 +74,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<div class="article">
 								<article>
 									<img src="img/nominate.png" align="right">
-									<h4>购物小助手</h4>
-									<h5>Vote for us now!</h5>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat. <a href="column3.html">More <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+									<h4>推荐系统</h4>
+									<h5>功能完善中……</h5>
+									<p> 推荐系统推荐系统推荐系统推荐系统推荐系统推荐系统推荐系统推荐系统推荐系统推荐系统推荐系统 <a href="column3.html">More <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 								</article>
 							</div>
 						</div>
@@ -84,9 +84,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<div class="article">
 								<article>
 									<img src="img/starway.png" align="right">
-									<h4>Use the star way!</h4>
-									<h5>Order now!</h5>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <a href="column3.html">More <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+									<h4>走过路过不要错过</h4>
+									<h5>马上抢购!</h5>
+									<p> <a href="column3.html">More <span class="glyphicon glyphicon-chevron-right"></span></a></p>
 								</article>
 							</div>
 						</div>

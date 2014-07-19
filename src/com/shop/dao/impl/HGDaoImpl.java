@@ -83,7 +83,58 @@ public class HGDaoImpl implements HGDao{
 			//关闭资源
 			JDBCTools.close(rs, pstmt, conn);
 		}
+
 		return goods;
 	}
+
+	public List<Goods> selectGoods(String search) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		Goods goods = null;
+		List<Goods> list = new ArrayList<Goods>();
+		try {
+			//获取连接
+			conn = JDBCTools.getConn();
+			//传入SQL语句
+			String sql = "select * from goods where goodsDescription like '%"+search
+				+"%' or goodsName like '%"+search
+				+"%' or goodsManufacturer like '%"+search+"%';";
+			//String sql = "select * from goods where goodsDescription like '%?%' or goodsName like '%?%' or goodsManufacturer like '%?%';";
+			pstmt= conn.prepareStatement(sql);
+			//将search惊醒模糊匹配
+			//String s = "'%"+search+"%'";
+			//String s = search;
+			/*pstmt.setString(1, s);
+			pstmt.setString(2, s);
+			pstmt.setString(3, s);*/
+			rs=pstmt.executeQuery();
+			
+			//判断是否存在相同用户名的用户，存在则取出用户信息
+			while(rs.next()){
+				goods = new Goods();//用于接收相同用户名的用户信息
+				goods.setGoodsId(rs.getString("goodsId"));
+				goods.setGoodsCode(rs.getString("goodsCode"));
+				goods.setGoodsName(rs.getString("goodsName"));
+				goods.setGoodsNum(rs.getInt("goodsNum"));
+				goods.setGoodsStatus(rs.getString("goodsStatus"));
+				goods.setGoodsType(rs.getInt("goodsType"));
+				goods.setGoodsDescription(rs.getString("goodsDescription"));
+				goods.setGoodsPrice(rs.getDouble("goodsPrice"));
+				
+				list.add(goods);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally{
+			//关闭资源
+			JDBCTools.close(rs, pstmt, conn);
+		}
+
+		return list;
+	}
+
+
 
 }

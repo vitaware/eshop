@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -37,9 +38,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-	        <li><a href="#">登录</a></li>
-	        <li><a href="#">注册</a></li>
-	        <li><a href="#">我的订单</a></li>
+	     <c:if test="${empty loginuser}">
+  		 	 <li><a href="${pageContext.request.contextPath }/UMLoginServlet" target="index.jsp">登录</a></li>
+  			 <li><a href="${pageContext.request.contextPath }/UMRegiterServlet" target="index.jsp">注册</a></li>
+  		 </c:if>
+  		 
+  		 <c:if test="${!empty loginuser}">
+  		 	  <li>${loginuser.name }欢迎回来</li>
+  		 	  <li><a href="${pageContext.request.contextPath}/UMUpdateConServlet01" target="bottom">修改信息</a></li>
+  		 	  <li><a href="${pageContext.request.contextPath}/UMLoginOutConServlet">退出</a></li>
+  		 </c:if>
 	    </ul>
 	</div>
 </div>
@@ -53,19 +61,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 	</div>
 	<div class="col-lg-6 navbar-text">
+	<form id="form1"  action="${pageContext.request.contextPath}/HGSearchkw" name="f" target="bottom">
     	<div class="input-group">
-      		<input type="text" class="form-control" placeholder="" >
+      		<input type="text" id="kw1" name="wd" class="form-control" placeholder="" >
       		<span class="input-group-btn">
-        	<button class="btn btn-default btn-lg" type="button" style="padding: 7px 16px;">
+        	<button class="btn btn-default btn-lg" type="submit" style="padding: 7px 16px;">
 				<span class="glyphicon glyphicon-search"></span>
 			</button>
       		</span>
     	</div><!-- /input-group -->
+    	</form>
   	</div><!-- /.col-lg-6 -->
 	<div class="col-lg-2 navbar-text">
-		<button type="button" class="btn btn-default btn-lg">
+		<a class="btn btn-default btn-lg" href="${pageContext.request.contextPath}/WatchCartCon" target="bottom">
 		  <span class="glyphicon glyphicon-shopping-cart"></span>去购物车
-		</button>
+		</a>
 	</div>
 </div>
 		<div class="container" style="margin-bottom: 10px;">

@@ -9,7 +9,7 @@ package com.shop.domain;
  */
 public class UmFormBean {
 	private String id;
-	private String name;
+	private String userid;
 	private String goodsname;
 	private String colour;
 	private int  productnum;
@@ -22,12 +22,7 @@ public class UmFormBean {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	
 	public String getGoodsname() {
 		return goodsname;
 	}
@@ -58,20 +53,34 @@ public class UmFormBean {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public UmFormBean(String id,String name, String goodsname, String colour,
-			int productnum, String commoditytyp, double price) {
+	
+	
+	public String getUserid() {
+		return userid;
+	}
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+	public UmFormBean() {
+		// TODO Auto-generated constructor stub
+	}
+	public UmFormBean(String id, String userid, String goodsname,
+			String colour, int productnum, String commoditytyp, double price) {
 		super();
-		this.id = id; 
-		this.name = name;
+		this.id = id;
+		this.userid = userid;
 		this.goodsname = goodsname;
 		this.colour = colour;
 		this.productnum = productnum;
 		this.commoditytyp = commoditytyp;
 		this.price = price;
 	}
-	
-	public UmFormBean() {
-		// TODO Auto-generated constructor stub
+	@Override
+	public String toString() {
+		return "UmFormBean [colour=" + colour + ", commoditytyp="
+				+ commoditytyp + ", goodsname=" + goodsname + ", id=" + id
+				+ ", price=" + price + ", productnum=" + productnum
+				+ ", userid=" + userid + "]";
 	}
 	
 	

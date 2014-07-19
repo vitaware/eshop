@@ -49,7 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</head>
 <body>
 <div>
-
+<div class="container ">
 　　　<form id="frm" method="post" action="${pageContext.request.contextPath}/DelGoodsCon">
 	　　　<table WIDTH=800 CELLSPACING="0" CELLPADDING="0" BORDER="1">
 		
@@ -105,6 +105,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				
 	　　</table>
 　　</form>
+</div>
 </div>
 	<script src="http://lib.sinaapp.com/js/jquery/1.8/jquery.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>

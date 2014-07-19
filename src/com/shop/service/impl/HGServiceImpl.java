@@ -20,4 +20,9 @@ public class HGServiceImpl implements HGService{
 		return hgDao.selectGoodsByCode(goodsCode);
 	}
 
+	public List<Goods> selectGoods(String search) {
+		
+		return hgDao.selectGoods(search);
+	}
+
 }
