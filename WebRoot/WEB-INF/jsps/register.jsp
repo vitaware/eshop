@@ -76,74 +76,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</script>
   </head>
   
-  <body style="text-align: center;" onload="loadProvince();"><%--
- 		
- 		<form action="${pageContext.request.contextPath}/UMRegServlet"  method="post">
-    	
-   		<table width="60%" border="1">
-    			<tr>
-    				<td>昵称</td>
-    				<td>
-    					<input type="text" name="name"  value="${formbean.name }"/>   ${formerror.errorname} 
-    				</td>
-    			</tr>
-    			<tr>
-    				<td>密码</td>
-    				<td>
-    					<input type="password" name="pwd"  /> ${formerror.errorpwd}
-    				</td>
-    			</tr>
-    			<tr>
-    				<td>确认密码</td>
-    				<td>
-    					<input type="password" name="repwd"  />   ${formerror.errorrepwd}
-    				</td>
-    			</tr>
-    			<tr>
-    				<td>出生日期</td>
-    				<td>
-    					<input type="text" name="birthday"    id="birthday"   value="${formbean.birthday}"
-    				 
-    					 onClick="return showCalendar('birthday', 'y-mm-dd');"/> 
-    				 
-    				</td>
-    			</tr>
-    			<tr>
-    				<td>性别</td>
-    				<td>
-    				
-    				<input type="radio" checked="checked" name="gender"  id="sex" value = "男"/>男
-           			<input type="radio" name="gender"  id="sex" value = "女"/>女
-                              
-    				</td>
-    			</tr>
-    			<tr>
-    				<td>收货地址</td>
-    				<td>
-    			
-    				<select id="province" onchange="loadCity();">
-							<option value="000">--请选择--</option>
-						</select>省
-						<select id="city" onchange="loadTown();">
-							<option value="000">--请选择--</option>
-						</select>市
-						<select id="town" onchange="getAddress();">
-							<option value="000">--请选择--</option>
-						</select>县/区
-				
-    				<input type="hidden" name="address" id="address" value="${formbean.address}" >
-    				</td>
-    			</tr>
-    			<tr>
-    				<td colspan="2">
-    					<input type="submit" value="注册"/>
-    				</td>
-     			</tr>
-    		</table>
-   	</form>
-   	
-   	
-		--%>
+  <body style="text-align: center;" onload="loadProvince();">
 		<div class="container">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-default">
@@ -183,7 +116,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<label for="user_email">
 									收货地址
 								</label>
-								<select id="province" onchange="loadCity();">
+								<select  id="province" onchange="loadCity();">
 									<option value="000">--请选择--</option>
 								</select>省
 								<select id="city" onchange="loadTown();">
